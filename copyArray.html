@@ -13,7 +13,14 @@
 	arr1.splice(1, 0, arr2);
 	console.log(arr1); // ['a', ['1', '2', '3'], 'c', 'b']
 	// 此时只实现了把数组当成一个数组项插入到arr1
+	// 方法二 ： 使用一个循环，把数组二中的数据插入到数组一中
+	for(i=0,len=arr2.length,j = 1;i<len;i++,j++){
+		arr1.splice(j,0,arr2[i]);
+	}
+	console.log(arr1);
 	
+	// 方法三 ： 使用call或apply函数
+
 </script>	
 </body>
 </html>
