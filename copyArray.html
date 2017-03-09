@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>实现数组的复制</title>
+</head>
+<body>
+<script>
+	var arr1 = ['a', 'c', 'b'];
+	var arr2 = ['1', '2', '3'];
+	// 把数组2 插入到数组的第一个元素后面 
+	// 方法一 ： 使用splice方法 
+	arr1.splice(1, 0, arr2);
+	console.log(arr1); // ['a', ['1', '2', '3'], 'c', 'b']
+	// 此时只实现了把数组当成一个数组项插入到arr1
+	
+</script>	
+</body>
+</html>
