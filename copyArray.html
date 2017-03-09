@@ -18,9 +18,13 @@
 		arr1.splice(j,0,arr2[i]);
 	}
 	console.log(arr1);
-	
-	// 方法三 ： 使用call或apply函数
 
+	// 方法三 ： 使用call或apply函数,其中用unshift函数在arr2前插入指定splice函数的参数
+	// 以确定插入arr1 的位置
+	arr2.unshift('1','0'); 
+	Array.prototype.splice.apply(arr1,arr2); // Array.prototype.splice.call(arr1,1,0,'1','2','3');
+	// 其中用call函数只能把参数逐个传入，当数据量大时不易操作
+	console.log(arr1);
 </script>	
 </body>
 </html>
