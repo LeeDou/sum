@@ -36,3 +36,6 @@ var mySingleton = (function (){
 	}
 })();
 ```
+
+> Singleton 的存在表明系统的模块要么是紧密耦合，要么是其逻辑过于分散
+在代码库的多个部分。
