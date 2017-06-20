@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	/*.box{
+		width: 400px;
+		height: 600px;
+		background-color: #ccc;
+		display: table;
+	}*/
+	/*.container{
+		display:table-cell;
+		width: 60px;
+		height: 60px;
+		vertical-align:middle;
+		background-color: red;
+	}*/
+	.box{
+		position: relative;
+		width: 400px;
+		height: 600px;
+		background-color: #ccc;
+
+	}
+	.container{
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto auto;
+	}
+	@media screen and (max-width: 800px) {
+     .content {
+     	width: 100%;
+         background-color:lightblue;
+     }
+ }
+ @media screen and (min-width: 801px) {
+     .content {
+     	width: 800px;
+     	height: 200px;
+         background-color:blue;
+     }
+ }
+</style>
+<body>
+<div class="content">
+	content
+</div>
+<div class="box">
+	<div class="container">子元素</div>
+</div>
+	<form>
+  <input id="text" pattern="^1[0-9]{10}$" required />
+  <!-- 第一题 -->
+	<!-- <input id="text" pattern="^0?1[3|4|5|8][0-9]\d{8}$" required /> -->
+   <div class="bar foo">hello word</div> 
+   <div class="bar foo">goodbye world</div> 
+
+</form>
+<script>
+	var foo = document.querySelector('.foo');
+	// 或
+	// foo.onclick=function(){
+	// 	alert('hello');
+	// }
+	var bar = document.querySelector('.bar');
+	// bar.onmouseover=function(){
+	// 	alert('good');
+	// }
+	// var foo=document.querySelectorAll('.foo');
+// 第二题
+// 
+	// foo.onclick = function(){
+	// 	console.log(foo.className)
+	// }
+	// 第三题
+    var bo = document.querySelector('body');
+    // console.log(bo.item(1));
+    bo.onclick = function(e){
+    	var event = e||window.e;
+    	var target = event.target || event.srcElement;
+    	console.log(target.innerHTML);
+    }
+// 第四题
+
+// css部分
+// 第一题
+// 方法一：
+// .child{
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);  /* 使用css3的transform来实现 */
+// }
+// 方法一：定位50%+transform:translate(-50%,-50%)。
+// 方法二：定位50%+margin负值,margin的值是自己宽高的一半。
+// 方法三：display:flex + margin:auto
+// 方法四：将父元素设置固定宽高以及positon:relative;然后将子元素设置为positon:absolute，并将其四个方位的值都置为0;同时指定margin:auto auto。
+
+// 第二题
+// @media screen and (max-width: 800px) {
+//      .container {
+//      	width: 100%;
+//          background-color:lightblue;
+//      }
+//  }
+//  @media screen and (min-width: 801px) {
+//      .container {
+//      	width: 800px;
+//      	height: 200px;
+//          background-color:blue;
+//      }
+//  }
+</script>
+</body>
+</html>
