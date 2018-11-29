@@ -1,0 +1,4 @@
+微信公众号id和秘钥
+
+AppID: wxb626ae824b5621fe
+AppSecret: 39814cfebc450ce811acc792452f2969
