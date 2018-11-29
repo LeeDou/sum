@@ -20,7 +20,7 @@ console.timeEnd("mytime");
 
 ```
 var myArray = [{a:1,b:2},{a:4,b:5},{k:6,d:10}];
-console.log.table(myarry);
+console.table(myArray);
 ```
 
 
